@@ -1,0 +1,12 @@
+<div>
+  <h1>WebSocket Chat</h1>
+  <form (submit)="sendMessage($event)">
+    <input type="text" [(ngModel)]="message" name="message" autocomplete="off" />
+    <button>Send</button>
+  </form>
+  <ul>
+    <li *ngFor="let msg of messages">
+      {{ msg.clientId }}: {{ msg.message }}
+    </li>
+  </ul>
+</div>
